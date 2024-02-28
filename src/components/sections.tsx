@@ -91,18 +91,6 @@ export const Skills: FC = () => {
               <IconBox iconName={name} />
             ))
           }
-          {/* <div className="h-36">
-            <GithubIcon className="fill-white h-16" />
-            <p className="mt-4">GitHub</p>
-          </div>
-          <div className="h-36">
-            <TypeScriptIcon className="fill-white h-16" />
-            <p className="mt-4">TypeScript</p>
-          </div>
-          <div className="h-36">
-            <ReactIcon className="fill-white h-16" />
-            <p className="mt-4">React</p>
-          </div> */}
         </div>
       </div>
     </section></>
