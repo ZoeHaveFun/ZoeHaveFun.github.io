@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Quicksand } from 'next/font/google';
-import { About, Angle, Hero } from "@/components/sections";
+import { About, Angle, Hero, Skills } from "@/components/sections";
 
 const quicksand = Quicksand({
   weight: ['300', '400', '500', '600'],
@@ -18,10 +18,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={quicksand.style} className="text-lg font-base leading-snug sm:leading-normal">
+      <main style={quicksand.style} className="text-xl font-base text-main-black leading-snug sm:leading-normal">
         <Hero />
-        <Angle bgColor={"bg-main-beige"} coverColor={"bg-main-violet"} clipPath={"polygonA"}/>
+        <Angle bgColor="bg-main-beige" coverColor="after:bg-main-violet" clipPath="after:clip-path-polygonA" rwd="sm:h-32 lg:h-40 h-20" />
         <About />
+        <Angle bgColor="bg-main-green" coverColor="after:bg-main-beige" clipPath="after:clip-path-polygonB" rwd="sm:h-14 lg:h-20 h-9" />
+        <Skills />
+        <Angle bgColor="bg-green-light" coverColor="after:bg-main-green" clipPath="after:clip-path-polygonC" rwd="sm:h-14 lg:h-20 h-9" />
       </main>
     </>
   )
