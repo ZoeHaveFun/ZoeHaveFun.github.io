@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       padding: {
-        '8%': '8%',
+        'wrapper': '10%',
       },
       colors: {
         "main-beige": "#E5E2D6",
@@ -22,6 +22,7 @@ module.exports = {
       "polygonA": "polygon(100% 100%, 100% 0, 0 0)",
       "polygonB": "polygon(0 0, 100% 0, 25% 100%)",
       "polygonC": "polygon(0 0, 100% 0, 0 100%)",
+      "polygonD": "polygon(0 0, 100% 0, 100% 70%, 77% 100%, 12% 42%, 0 60%)"
     },
   },
   plugins: [
