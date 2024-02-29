@@ -26,7 +26,7 @@ type AngleProps = {
 export const Angle: FC<AngleProps> = ({ bgColor, coverColor, clipPath, rwd }) => {
   return (
     <div className={`w-full ${rwd} ${bgColor} 
-    after:content-[''] after:block after:h-full ${coverColor} ${clipPath}
+    after:content-[&apos;&apos;] after:block after:h-full ${coverColor} ${clipPath}
     `}></div>
   );
 };
@@ -38,7 +38,7 @@ export const Hero: FC = () => {
         <h1>
           <span>Hello, I am Zoe</span>
           <br />
-          I'm a
+          I&apos;m a
           <span className="font-bold"> Designer turned Enginner </span>
           and
         </h1>
@@ -63,7 +63,7 @@ export const About: FC = () => {
           <div className="sm:w-3/4 sm:pl-[5%] sm:pt-0 pt-4 leading-5 transition">
             <h2 className="text-2xl font-bold text-violet-dark">A curiosity-driven Front-End Developer with design chops.</h2>
             <p className="py-4">
-              I'm passionate about  bringing both the technical and visual aspects of digital products to life. User experience, beautiful pixels and writing clean accessible, human code matters to me. I sweat the details. And as a follower of John Maeda’s
+              I&apos;m passionate about  bringing both the technical and visual aspects of digital products to life. User experience, beautiful pixels and writing clean accessible, human code matters to me. I sweat the details. And as a follower of John Maeda’s
               <a href="http://lawsofsimplicity.com/" target="_blank" aria-label="open link to laws of simplicity website." className="text-main-violet font-bold hover:text-white">
                  Laws of simplicity
               </a>
@@ -72,10 +72,10 @@ export const About: FC = () => {
             <br />
             {/* <p>
               I have a BA in Product Designer from
-              <a href="https://www.isu.edu.tw/pages/" target="_blank" aria-label="open link to I-Shou University's website." className="text-main-violet font-bold hover:text-white">I-Shou University</a>
+              <a href="https://www.isu.edu.tw/pages/" target="_blank" aria-label="open link to I-Shou University&apos;s website." className="text-main-violet font-bold hover:text-white">I-Shou University</a>
             </p> */}
             <p>
-              I'm happiest when I'm creating, learning, exploring and thinking about how to make things better.
+              I&apos;m happiest when I&apos;m creating, learning, exploring and thinking about how to make things better.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const Skills: FC = () => {
         <div className="my-10 grid gap-x-3 sm:grid-cols-4 lg:grid-cols-8 grid-cols-2">
           {
             icons.map(({ name }) => (
-              <IconBox iconName={name} />
+              <IconBox iconName={name} key={name} />
             ))
           }
         </div>
@@ -113,7 +113,7 @@ export const Works: FC = () => {
       <div className="max-w-7xl mx-auto px-wrapper">
         <h2 className="pb-2 text-[#638361]">PROJECTS</h2>
         <h3 className="text-4xl font-bold text-violet-dark pb-4">
-          A Selection Of Stuff I've Built
+          A Selection Of Stuff I&apos;ve Built
         </h3>
 
         <div className="">
