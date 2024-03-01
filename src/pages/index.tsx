@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hello, I am Zoe</title>
-        <meta name="description" content="Hello, I am Zoe" />
+        <title>Zoe Fan</title>
+        <meta name="description" content="Zoe Fan" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:url" content="https://ZoeHaveFun.github.io" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Hello, I am Zoe" />
-        <meta property="og:description" content="Hello, I am Zoe" />
+        <meta property="og:title" content="Zoe Fan" />
+        <meta property="og:description" content="Zoe Fan" />
         <meta property="og:image" content="" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
