@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import portraitPic from "../../public/portrait.jpg";
-import { GithubIcon, icons, IconsSVG } from "./icons";
+import { GithubIcon, icons, IconsSVG, ReactIcon, WebsiteIcon } from "./icons";
 
 type IconBoxProps = {
   iconName: string
@@ -116,14 +116,21 @@ export const Works: FC = () => {
           A Selection Of Stuff I&apos;ve Built
         </h3>
 
-        <div className="">
+        <div className="w-[45%]">
           <span className="text-2xl">SéSann</span>
-          <div className="">
-            <a href="https://github.com/ZoeHaveFun/SeSann" target="_blank">
-              <GithubIcon className="fill-white h-10 hover:fill-slate-500"/>
+          <p>
+          This platform addresses the frustration of arriving at a laundromat only to find all machines in use, offering services for checking availability, reserving machines, and providing end-of-cycle reminders. Additionally, it includes a management backend for laundromat owners to collect and analyze machine usage data, enhancing overall efficiency and user experience.
+          </p>
+          <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
+            <a href="https://github.com/ZoeHaveFun/SeSann" target="_blank" aria-label="open link to SéSann github repo.">
+              <GithubIcon className="fill-white h-5 hover:fill-slate-500"/>
             </a>
+            <a href="https://laundry-27ace.web.app" target="_blank" aria-label="open linke to SéSann website">
+              <WebsiteIcon className="fill-white h-5 hover:fill-slate-500"/>
+            </a>
+            <ReactIcon className="fill-white h-5"/>
           </div>
-          
+
         </div>
       </div>
     </section>
