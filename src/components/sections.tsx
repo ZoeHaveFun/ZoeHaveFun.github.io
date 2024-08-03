@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import portraitPic from "../../public/portrait.jpg";
+import SéSann  from "../../public/works/SéSann.png";
 import { GithubIcon, icons, IconsSVG, ReactIcon, WebsiteIcon } from "./icons";
 
 type IconBoxProps = {
@@ -116,7 +117,8 @@ export const Works: FC = () => {
           A Selection Of Stuff I&apos;ve Built
         </h3>
 
-        <div className="w-[45%]">
+        <div className="flex">
+          <div className="w-[45%]">
           <span className="text-2xl">SéSann</span>
           <p>
           This platform addresses the frustration of arriving at a laundromat only to find all machines in use, offering services for checking availability, reserving machines, and providing end-of-cycle reminders. Additionally, it includes a management backend for laundromat owners to collect and analyze machine usage data, enhancing overall efficiency and user experience.
@@ -130,8 +132,15 @@ export const Works: FC = () => {
             </a>
             <ReactIcon className="fill-white h-5"/>
           </div>
-
+          </div>
+          <div className="w-[55%]">
+            <Image
+             src={SéSann}
+             className="object-contain"
+             alt="devices showing screenshots of SéSann."/>
+          </div>
         </div>
+        
       </div>
     </section>
   );
