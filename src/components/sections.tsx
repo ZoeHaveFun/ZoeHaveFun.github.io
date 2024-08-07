@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import portraitPic from "../../public/portrait.jpg";
-import SéSann  from "../../public/works/SéSann.png";
+import SéSann  from "../../public/projects_view/SéSann.png";
 import { GithubIcon, icons, IconsSVG, ReactIcon, WebsiteIcon } from "./icons";
 
 type IconBoxProps = {
@@ -108,7 +108,7 @@ export const Skills: FC = () => {
   );
 };
 
-export const Works: FC = () => {
+export const Projects: FC = () => {
   return (
     <section className="bg-green-light py-20">
       <div className="max-w-7xl mx-auto px-wrapper">

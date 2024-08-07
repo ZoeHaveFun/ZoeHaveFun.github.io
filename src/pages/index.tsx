@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Quicksand } from 'next/font/google';
-import { About, Angle, Hero, Skills, Works } from "@/components/sections";
+import { About, Angle, Hero, Skills, Projects } from "@/components/sections";
 
 const quicksand = Quicksand({
   weight: ['300', '400', '500', '600'],
@@ -33,7 +33,7 @@ export default function Home() {
         <Angle bgColor="bg-main-green" coverColor="after:bg-main-beige" clipPath="after:clip-path-polygonB" rwd="sm:h-14 lg:h-20 h-9" />
         <Skills />
         <Angle bgColor="bg-green-light" coverColor="after:bg-main-green" clipPath="after:clip-path-polygonC" rwd="sm:h-14 lg:h-20 h-9" />
-        <Works />
+        <Projects />
         <Angle bgColor="bg-violet-ash" coverColor="after:bg-green-light" clipPath="after:clip-path-polygonD" rwd="sm:h-14 lg:h-20 h-9" />
       </main>
     </>
