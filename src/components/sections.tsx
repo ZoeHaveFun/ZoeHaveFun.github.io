@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import portraitPic from "../../public/portrait.jpg";
-import SéSann  from "../../public/projects_view/SéSann.png";
-import { GithubIcon, icons, IconsSVG, ReactIcon, WebsiteIcon } from "./icons";
+import SéSann from "../../public/projects_view/SéSann.png";
+import STYLiSH from "../../public/projects_view/STYLiSH.png";
+import PM_Tool from "../../public/projects_view/Pallets-Management-Tool.png";
+import Chickin_Now from "../../public/projects_view/Chick-in-Now.png";
+
+import { GithubIcon, icons, IconsSVG, ReactIcon, VueIcon, WebsiteIcon } from "./icons";
 
 type IconBoxProps = {
   iconName: string
@@ -66,7 +70,7 @@ export const About: FC = () => {
             <p className="py-4">
               I&apos;m passionate about  bringing both the technical and visual aspects of digital products to life. User experience, beautiful pixels and writing clean accessible, human code matters to me. I sweat the details. And as a follower of John Maeda’s
               <a href="http://lawsofsimplicity.com/" target="_blank" aria-label="open link to laws of simplicity website." className="text-main-violet font-bold hover:text-white">
-                 Laws of simplicity
+                Laws of simplicity
               </a>
               , I agree that less is more.
             </p>
@@ -117,30 +121,108 @@ export const Projects: FC = () => {
           A Selection Of Stuff I&apos;ve Built
         </h3>
 
-        <div className="flex">
-          <div className="w-[45%]">
-          <span className="text-2xl">SéSann</span>
-          <p>
-          This platform addresses the frustration of arriving at a laundromat only to find all machines in use, offering services for checking availability, reserving machines, and providing end-of-cycle reminders. Additionally, it includes a management backend for laundromat owners to collect and analyze machine usage data, enhancing overall efficiency and user experience.
-          </p>
-          <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
-            <a href="https://github.com/ZoeHaveFun/SeSann" target="_blank" aria-label="open link to SéSann github repo.">
-              <GithubIcon className="fill-white h-5 hover:fill-slate-500"/>
-            </a>
-            <a href="https://laundry-27ace.web.app" target="_blank" aria-label="open linke to SéSann website">
-              <WebsiteIcon className="fill-white h-5 hover:fill-slate-500"/>
-            </a>
-            <ReactIcon className="fill-white h-5"/>
+        <div className="grid gap-20">
+          {/* SéSann */}
+          <div className="flex">
+            <div className="w-[45%]">
+              <span className="text-2xl">SéSann</span>
+              <p>
+                This platform addresses the frustration of arriving at a laundromat only to find all machines in use, offering services for checking availability, reserving machines, and providing end-of-cycle reminders. Additionally, it includes a management backend for laundromat owners to collect and analyze machine usage data, enhancing overall efficiency and user experience.
+              </p>
+              <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
+                <a href="https://github.com/ZoeHaveFun/SeSann" target="_blank" aria-label="open link to SéSann github repo.">
+                  <GithubIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                <a href="https://laundry-27ace.web.app" target="_blank" aria-label="open linke to SéSann website">
+                  <WebsiteIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                <ReactIcon className="fill-white h-5" />
+              </div>
+            </div>
+            <div className="w-[55%]">
+              <Image
+                src={SéSann}
+                className="object-contain"
+                alt="devices showing screenshots of SéSann." />
+            </div>
           </div>
+          {/* STYLiSH */}
+          <div className="flex">
+            <div className="w-[55%]">
+              <Image
+                src={STYLiSH}
+                className="object-contain"
+                alt="devices showing screenshots of STYLiSH." />
+            </div>
+            <div className="w-[45%]">
+              <span className="text-2xl">STYLiSH</span>
+              <p>
+                This online shopping website integrates Facebook SDK for third-party login and TapPay SDK for credit card payments, ensuring seamless and secure transactions.
+              </p>
+              <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
+                <a href="https://github.com/ZoeHaveFun/SeSann" target="_blank" aria-label="open link to SéSann github repo.">
+                  <GithubIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                <a href="https://zoehavefun.github.io/Front-End-Class-Batch16/students/zoe/" target="_blank" aria-label="open linke to SéSann website">
+                  <WebsiteIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                <ReactIcon className="fill-white h-5" />
+              </div>
+            </div>
           </div>
-          <div className="w-[55%]">
-            <Image
-             src={SéSann}
-             className="object-contain"
-             alt="devices showing screenshots of SéSann."/>
+          {/* Pallets-Management-Tool */}
+          <div className="flex">
+            <div className="w-[45%]">
+              <span className="text-2xl">
+                Pallets-Management-Tool
+              </span>
+              <p>
+                Utilize pallet management tools to track cargo flow and mitigate loss or damage commonly occurring between factories and dealers. These tools feature a hierarchical permission management structure enabling different user classes to access specific functions.
+              </p>
+              <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
+                <a href="https://github.com/ZoeHaveFun/Pallets-Management-Tool" target="_blank" aria-label="open link to SéSann github repo.">
+                  <GithubIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                {/* <a href="https://zoehavefun.github.io/Front-End-Class-Batch16/students/zoe/" target="_blank" aria-label="open linke to SéSann website">
+                  <WebsiteIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a> */}
+                {/* <ReactIcon className="fill-white h-5" /> */}
+              </div>
+            </div>
+            <div className="w-[55%]">
+              <Image
+                src={PM_Tool}
+                className="object-contain"
+                alt="devices showing screenshots of STYLiSH." />
+            </div>
+          </div>
+          {/* Chick-in-Now */}
+          <div className="flex">
+            <div className="w-[55%]">
+              <Image
+                src={Chickin_Now}
+                className="object-contain"
+                alt="devices showing screenshots of STYLiSH." />
+            </div>
+            <div className="w-[45%]">
+              <span className="text-2xl">Chick-in-Now</span>
+              <p>
+              Amid the epidemic, remote work is prevalent, and online check-in platforms enable seamless record-keeping irrespective of location.
+              </p>
+              <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
+                <a href="https://github.com/ZoeHaveFun/Chick-in-Now" target="_blank" aria-label="open link to SéSann github repo.">
+                  <GithubIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a>
+                {/* <a href="https://zoehavefun.github.io/Front-End-Class-Batch16/students/zoe/" target="_blank" aria-label="open linke to SéSann website">
+                  <WebsiteIcon className="fill-white h-5 hover:fill-slate-500" />
+                </a> */}
+                <VueIcon className="fill-white h-5" />
+              </div>
+            </div>
           </div>
         </div>
-        
+
+
       </div>
     </section>
   );
