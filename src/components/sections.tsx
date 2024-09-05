@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC, ReactNode } from "react";
+import { FC, useEffect, useState } from "react";
 import portraitPic from "../../public/portrait.jpg";
 import SéSann from "../../public/projects_view/SéSann.png";
 import STYLiSH from "../../public/projects_view/STYLiSH.png";
@@ -7,6 +7,7 @@ import PM_Tool from "../../public/projects_view/Pallets-Management-Tool.png";
 import Chickin_Now from "../../public/projects_view/Chick-in-Now.png";
 
 import { GithubIcon, icons, IconsSVG, ReactIcon, VueIcon, WebsiteIcon } from "./icons";
+import TextTransition, { presets } from "./textTransition";
 
 type IconBoxProps = {
   iconName: string
@@ -37,15 +38,38 @@ export const Angle: FC<AngleProps> = ({ bgColor, coverColor, clipPath, rwd }) =>
 };
 
 export const Hero: FC = () => {
+  const [index, setIndex] = useState(0)
+  const Identities = [
+    "Front-End Engineer",
+    "Industrial Designer",
+    "Animation Fan",
+    "Cat Servant",
+    "ENFJ",
+    "Bibliophile",
+    "Skipping Aficionado"
+  ]
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex(i => i + 1)
+    }, 2000)
+
+    return () => clearInterval(intervalId)
+  }, [])
   return (
     <section className="pt-28 pb-24 relative bg-main-violet text-white">
-      <div className="max-w-7xl mx-auto px-wrapper text-5xl leading-normal">
+      <div className="max-w-7xl mx-auto px-wrapper text-5xl font-bold leading-normal">
         <h1>
           <span>Hello, I am Zoe</span>
           <br />
-          I&apos;m a
-          <span className="font-bold"> Designer turned Enginner </span>
-          and
+          I&apos;m a&nbsp;
+          <TextTransition
+            inline
+            className="transition-text"
+            // delay={200}
+            springConfig={presets.wobbly}>
+            {Identities[index % Identities.length]}
+          </TextTransition>
         </h1>
       </div>
     </section>
@@ -126,7 +150,7 @@ export const Projects: FC = () => {
           <div className="flex">
             <div className="w-[45%]">
               <span className="text-2xl">SéSann</span>
-              <p>
+              <p className="mt-2">
                 This platform addresses the frustration of arriving at a laundromat only to find all machines in use, offering services for checking availability, reserving machines, and providing end-of-cycle reminders. Additionally, it includes a management backend for laundromat owners to collect and analyze machine usage data, enhancing overall efficiency and user experience.
               </p>
               <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
@@ -207,7 +231,7 @@ export const Projects: FC = () => {
             <div className="w-[45%]">
               <span className="text-2xl">Chick-in-Now</span>
               <p>
-              Amid the epidemic, remote work is prevalent, and online check-in platforms enable seamless record-keeping irrespective of location.
+                Amid the epidemic, remote work is prevalent, and online check-in platforms enable seamless record-keeping irrespective of location.
               </p>
               <div className="pt-2 grid grid-flow-col auto-cols-min gap-x-2">
                 <a href="https://github.com/ZoeHaveFun/Chick-in-Now" target="_blank" aria-label="open link to SéSann github repo.">
@@ -223,6 +247,36 @@ export const Projects: FC = () => {
         </div>
 
 
+      </div>
+    </section>
+  );
+};
+
+export const Experience: FC = () => {
+  return (
+    <section className="bg-violet-ash py-20">
+      <div className="max-w-7xl mx-auto px-wrapper">
+        <h2 className="pb-2 text-green-light">EXPERIENCE</h2>
+        <div className="p-2 border-b-2 border-violet-dark font-semibold ">
+          <h3 className="text-2xl">Genki</h3>
+          <p className="text-sm">2023 APR - 2024 AUG | Taipei, Taiwan</p>
+          <p className="text-main-beige">Front-End Engineer</p>
+        </div>
+        <div className="p-2 border-b-2 border-violet-dark font-semibold ">
+          <h3 className="text-2xl">Genki</h3>
+          <p className="text-sm">2022 SEP - 2023 APR | Taipei, Taiwan</p>
+          <p className="text-main-beige">Front-End Engineer</p>
+        </div>
+        <div className="p-2 border-b-2 border-violet-dark font-semibold ">
+          <h3 className="text-2xl">AppWorks School</h3>
+          <p className="text-sm">2022 APR - 2022 AUG | Taipei, Taiwan</p>
+          <p className="text-main-beige">Front-End Engineer, Trainee</p>
+        </div>
+        <div className="p-2 border-b-2 border-violet-dark font-semibold ">
+          <h3 className="text-2xl">Whisbih International Enterprise</h3>
+          <p className="text-sm">2021 FEB - 2022 MAR | Kaohsiung, Taiwan</p>
+          <p className="text-main-beige">Front-End Engineer</p>
+        </div>
       </div>
     </section>
   );
